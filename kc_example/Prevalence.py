@@ -140,7 +140,7 @@ if __name__ == "__main__":
 	if _version == 0:
 		epi_curve = SplineTestingEpiCurve(timeseries,debug=False)
 	elif _version == 1:
-		epi_curve, _, _ = RandomWalkEpiCurve(timeseries,debug=True)
+		epi_curve, _, _ = RandomWalkEpiCurve(timeseries,debug=False)
 
 	## Reindex cases to harmonize all the different timeseries.
 	time = pd.date_range(start="01-15-2020",end=timeseries.index[-1],freq="d")
