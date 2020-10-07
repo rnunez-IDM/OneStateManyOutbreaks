@@ -1,3 +1,16 @@
+# DB credentials
+credentials/
+
+# Organizational stuff
+_data/
+_plots/
+_outputs/
+pickle_jar/
+_models/
+
+# Bad code
+exp_*.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
