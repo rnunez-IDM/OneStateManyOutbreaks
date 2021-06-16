@@ -421,7 +421,7 @@ if __name__ == "__main__":
 	inset.set_xticks(ticks[1::2])
 	inset.set_xticklabels([t.strftime("%b").replace("Feb","") for t in ticks[1::2]])
 	inset.set_ylabel("Hospitalizations")
-	fig.savefig("..\\_plots\\example_r0.png")
+	fig.savefig("../_plots/example_r0.png")
 
 	## Figure 2: IFR+IHR over time
 	fig, axes = plt.subplots(2,1,sharex=True,figsize=(12,9))

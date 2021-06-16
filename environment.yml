@@ -1,11 +1,12 @@
 # To configure a conda environment, run
 #    conda env create -f environment.yml
 #
-name: 20210616-rainier-b
+name: 20210616-rainier
 channels:
   - conda-forge
   - defaults
 dependencies:
+  - python=3.8
   #- gdal==3.0.4
   #- fiona==1.8.13
   #- geopandas==0.8.1
