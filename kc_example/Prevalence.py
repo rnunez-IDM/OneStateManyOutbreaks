@@ -101,7 +101,7 @@ def low_mid_high(samples):
 def GetPopulationPyramid(group):
 
 	## Get the CSV from Roy
-	age_pop = pd.read_csv("..\\_example_datasets\\WA_county_age_pop.csv",
+	age_pop = pd.read_csv("../_example_datasets/WA_county_age_pop.csv",
 						  header=0,
 						  usecols=["county","age_grp10","pop","pop_pct"])
 
@@ -125,10 +125,10 @@ if __name__ == "__main__":
 
 	## Compile all the necessary data, the testing and mortality dataset,
 	## the age-breakdown of cases, the age pyramid, and the population.
-	timeseries = pd.read_pickle("..\\_example_datasets\\aggregated_wdrs_linelist_september20.pkl")
+	timeseries = pd.read_pickle("../_example_datasets/aggregated_wdrs_linelist_september20.pkl")
 	timeseries = timeseries.loc[hp["counties"]].groupby("time").sum()
 	population, pyramid = GetPopulationPyramid(hp["counties"])
-	age_df = pd.read_pickle("..\\_example_datasets\\age_structured_cases_wdrs_september20.pkl")
+	age_df = pd.read_pickle("../_example_datasets/age_structured_cases_wdrs_september20.pkl")
 	age_df = age_df.loc[hp["counties"]].groupby("time").sum().loc["2020-03-01":]
 	
 	## How do you handle data at the end, where increased testing and
